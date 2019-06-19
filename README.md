@@ -1,7 +1,8 @@
 # firestoremodel.js
 Simple Firestore Model concept
 
-// Usage - Writing a model:
+Usage - Writing a model:
+```
   db.collection("cities").doc("LA").set(firestoreModel.process(
     { // Document Data
        name: "Los Angeles",
@@ -19,8 +20,10 @@ Simple Firestore Model concept
        schema_version: 1
     })
   );
+```
 
-// Usage - Getting a random document (sans no-result check):
+Usage - Getting a random document (sans no-result check):
+```
   var museums = db.collectionGroup('landmarks');
   var randomId = firestoreModel.randomId();
   query = museums.where(firestoreModel.randomField(), '>=', randomId).limit(1);
@@ -29,8 +32,10 @@ Simple Firestore Model concept
         console.log(doc.id, ' => ', doc.data());
     });
   });
-  
-// Usage - Query caseless:
+```
+
+Usage - Query caseless:
+```
   var searchTerm = 'Waſſerſchloß';
   var museums = db.collectionGroup('landmarks');
   query = museums.where(firestoreMode.caselessField('name'), '==', firestoreModel.removeCase(searchTerm));
@@ -39,3 +44,4 @@ Simple Firestore Model concept
         console.log(doc.id, ' => ', doc.data());
     });
   });
+```
