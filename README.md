@@ -50,3 +50,5 @@ Usage - Query caseless:
     });
   });
 ```
+
+Credits: Thanks to [@mathias](https://twitter.com/mathias) for helping with case folding in JavaScript.
