@@ -43,7 +43,7 @@ Usage - Query caseless:
 ```
   var searchTerm = 'Waſſerſchloß';
   var museums = db.collectionGroup('landmarks');
-  query = museums.where(firestoreMode.caselessField('name'), '==', firestoreModel.removeCase(searchTerm));
+  query = museums.where(firestoreModel.caselessField('name'), '==', firestoreModel.removeCase(searchTerm));
   query.get().then(function (querySnapshot) {
     querySnapshot.forEach(function (doc) {
         console.log(doc.id, ' => ', doc.data());
