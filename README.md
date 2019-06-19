@@ -1,6 +1,11 @@
 # firestoremodel.js
 Simple Firestore Model concept
 
+To use, just include it:
+```
+<script src="firestoremodel.js"></script>
+```
+
 Usage - Writing a model:
 ```
   db.collection("cities").doc("LA").set(firestoreModel.process(
